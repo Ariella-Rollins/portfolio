@@ -1,0 +1,815 @@
+#root {
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  margin:0;
+  overflow-x: hidden;
+}
+
+/* large/pc */
+@media only screen and (min-width:1000px) {
+
+  
+.parallax {
+  background-image: url("/thestar.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 0px;
+  z-index: -1;
+}
+.containers {
+  position: relative;
+  width: 100%;
+  min-width: 100vw;
+  min-height:2000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .cols {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+    .timeline-field {
+    background-color: transparent;
+    background-image: linear-gradient( to bottom, rgb(255, 255, 255, .3), rgb(255, 255, 255, .1) 40%, rgb(255, 255, 255, .1) 70%, rgb(255, 255, 255, .3));
+  }
+
+  fieldset {
+    width: 95%;
+  }
+
+  .vertical {
+    display: none;
+  }
+
+  .info {
+    width: 80%;
+  }
+
+  .project-card {
+    width: fill;
+  }
+  .project-card img {
+    padding-left: 0px;
+    padding-right: 0px;
+    height:170px;
+  }
+
+h1 {
+  font-size: 20pt;
+  font-family: merienda, monospace;
+}
+
+h2 {
+  font-size: 15pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+th {
+  font-size: 13pt;
+}
+
+button:hover, input[type=submit] {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(40px);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100
+}
+
+.popup {
+  color: black;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.banner {
+  width: 95%;
+}
+
+.title {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1.5px solid rgb(255, 255, 255, .4);
+  height: 70px;
+}
+
+.one {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.outro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.side {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 27px;
+}
+
+.ariella {
+  display: flex;
+  align-items: center;
+}
+
+.acc, .ariella {
+  width: 800px;
+}
+
+.journey {
+  border: 2px solid rgb(165, 255, 109);
+}
+
+.slots {
+  display: flex;
+  justify-content: center;
+  cursor: url('/tiny-sun.png'), auto;
+  padding-top: 20px;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  flex: 1
+}
+
+.sprout {
+  width: 25%;
+}
+
+.slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  /* height:fit-content;
+  width: fit-content; */
+  background: linear-gradient(to top, transparent, rgb(255, 255, 255, .2));
+}
+
+.slot:hover {
+  background: linear-gradient(to top, transparent, rgb(255, 255, 255, .5));
+}
+
+.journey-text {
+  display: flex;
+  flex:1;
+  min-height: 50px;
+  font-size: 11pt;
+  padding: 8px;
+  z-index: 20;
+  background-color: rgb(102, 35, 12);
+  color: orange;
+}
+
+.slot img {
+  margin: 30px 30px 0px 30px;
+  /* max-height: 170px; */
+  width: 70%;
+  background: linear-gradient(to top, transparent 10%, rgb(130, 243, 255, .8));
+  border-radius: 30px 30px 0 0;
+}
+
+.shine {
+  position: absolute;
+  height: 75%;
+  width: 50px;
+  top: 13px;
+  left: 10px;
+  background: linear-gradient(to right, rgba(157, 255, 255, 0.7), transparent);
+  border-radius: 70px 0 0 0;
+
+}
+.border-slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* this makes the heights not match */
+  /* justify-content: end; */
+  align-items: center;
+  height: 100%;
+  width: 70%;
+  max-width: 200px;
+  margin: 40px;
+  background: linear-gradient(to top, rgba(2, 66, 126, 0.5), rgb(130, 243, 255, .5));
+  border: 2px solid rgba(79, 88, 105);
+  border-radius: 70px 70px  0  0;
+  color: black;
+}
+
+.projects {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.link {
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+}
+}
+
+/* largest pc */
+@media only screen and (min-width: 1500px) {
+
+.parallax {
+  background-image: url("/thestar.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 0px;
+  z-index: 0
+}
+.containers {
+  position: relative;
+  width: 100%;
+  min-width: 100vw;
+  min-height:2000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.side {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 27px;
+}
+
+  .main {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .acc, .ariella {
+  width: 450px;
+}
+
+.cols {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+
+}
+
+
+/* med/tablets */
+@media only screen and (max-width:1099px) {
+
+    .main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .timeline-field {
+    background-color: transparent;
+    background-image: linear-gradient( to bottom, rgb(255, 255, 255, .5), rgb(255, 255, 255, .1) 40%, rgb(255, 255, 255, .1) 70%, rgb(255, 255, 255, .5));
+  }
+
+  fieldset {
+    width: 95%;
+  }
+
+  .horizontal {
+    display: none;
+  }
+
+  .vertical {
+    display:inline-block;
+  }
+  
+  .cols {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+  .project-card {
+    width: 400px;
+  }
+  .project-card img {
+    padding-left: 0px;
+    padding-right: 0px;
+    height:200px;
+  }
+
+h1 {
+  font-size: 20pt;
+  font-family: merienda, monospace;
+}
+
+h2 {
+  font-size: 15pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+th {
+  font-size: 13pt;
+}
+
+button:hover, input[type=submit] {
+  cursor: pointer;
+}
+
+.parallax {
+  background-image: url("/thestar.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 0px;
+  z-index: 0
+}
+
+.containers {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.info {
+  display: none;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(40px);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100
+}
+
+.popup {
+  color: black;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.banner {
+  width: 90%;
+}
+
+.title {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1.5px solid rgb(255, 255, 255, .4);
+  height: 70px;
+}
+
+.one {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.outro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px 0px;
+}
+
+.ariella {
+  display: flex;
+  align-items: center;
+}
+
+.acc, .ariella {
+  width: 480px;
+}
+
+.journey {
+  border: 2px solid rgb(165, 255, 109);
+}
+
+.sprout-box {
+  cursor: url('/tiny-sun.png'), auto;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top: 20px;
+}
+
+.slots > * {
+  padding: 20px;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+}
+
+.slot {
+  height:100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, transparent, rgb(255, 255, 255, .2));
+}
+
+.slot:hover {
+  background: linear-gradient(to top, transparent, rgb(255, 255, 255, .5));
+}
+
+.journey-text {
+  flex:1;
+  display: flex;
+  min-height: 50px;
+  z-index: 20;
+  background-color: rgb(102, 35, 12);
+  color: orange;
+  padding: 5px;
+}
+
+.slot img {
+  margin: 30px 30px 0px 30px;
+  width: 70%;
+  background: linear-gradient(to top, transparent, rgb(130, 243, 255));
+  border-radius: 30px 30px 0 0;
+}
+
+.shine {
+  position: absolute;
+  height: 75%;
+  width: 50px;
+  top: 13px;
+  left: 10px;
+  background: linear-gradient(to right, rgba(157, 255, 255, 0.7), transparent);
+  border-radius: 70px 0 0 0;
+
+}
+.border-slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+  margin: 30px;
+  background: linear-gradient(to top, rgba(2, 66, 126, 0.5), rgb(130, 243, 255, .5));
+  border: 2px solid rgba(79, 88, 105);
+  border-radius: 70px 70px  0  0;
+  color: black;
+}
+
+.projects {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.link {
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+}
+
+}
+
+
+
+
+/* small/phones */
+@media only screen and (max-width:640px) {
+
+  .duck {
+    display: none;
+  }
+  
+
+  .timeline-field {
+    background-color: transparent;
+    background-image: linear-gradient( to bottom, rgb(255, 255, 255, .5), rgb(255, 255, 255, .1) 40%, rgb(255, 255, 255, .1) 70%, rgb(255, 255, 255, .5));
+  }
+
+    fieldset {
+    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .horizontal {
+    display: none;
+  }
+
+  .acc, .ariella {
+  width: 350px;
+}
+
+  .info {
+    display: none;
+  }
+
+  .cols {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+  .project-card {
+    width: 400px;
+  }
+  .project-card img {
+    padding-left: 0px;
+    padding-right: 0px;
+    height:200px;
+  }
+
+th {
+  font-size: 13pt;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+button:hover, input[type=submit] {
+  cursor: pointer;
+}
+
+.parallax {
+  background-image: url("/thestar.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 0px;
+  z-index: 0
+}
+
+.containers {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(40px);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100
+}
+
+.popup {
+  color: black;
+  border-radius: 8px;
+  z-index: 100;
+  width: 94%;
+  align-items: center;
+}
+
+form {
+  width: 90%;
+}
+
+.banner {
+  width: 90%;
+}
+
+.title {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1.5px solid rgb(255, 255, 255, .4);
+  height: 70px;
+}
+
+.one {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.outro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px 0px;
+}
+
+.ariella {
+  display: flex;
+  align-items: center;
+}
+
+.sprout {
+  height: 50%;
+}
+
+.journey {
+  border: 2px solid rgb(234, 255, 42);
+}
+
+.slots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: url('/tiny-sun.png'), auto;
+  padding-top: 20px;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+}
+
+.slot {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, transparent, rgb(255, 255, 255, .4));
+}
+
+.slot:hover {
+  background: linear-gradient(to top, transparent, rgb(255, 255, 255, .7));
+}
+
+.journey-text {
+  flex:1;
+  z-index: 20;
+  background-color: rgb(102, 35, 12);
+  color: orange;
+  padding: 5px;
+}
+
+.slot img {
+  /* height: 130px; */
+  background: linear-gradient(to top, transparent, rgb(130, 243, 255));
+  border-radius: 30px 30px 0 0;
+}
+
+.shine {
+  position: absolute;
+  height: 75%;
+  width: 50px;
+  top: 13px;
+  left: 10px;
+  background: linear-gradient(to right, rgba(157, 255, 255, 0.7), transparent);
+  border-radius: 70px 0 0 0;
+
+}
+.border-slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  /* height: 250px; */
+  width: 185px;
+  margin: 40px;
+  background: linear-gradient(to top, rgba(2, 66, 126, 0.5), rgb(130, 243, 255, .5));
+  border: 2px solid rgba(79, 88, 105);
+  border-radius: 70px 70px  0  0;
+  color: black;
+}
+
+.projects {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.link {
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+}
+
+}
