@@ -3,25 +3,25 @@ import React, { useState, useEffect } from 'react';
 const Sprout = ({ sproutText, typeId, frameId }) => {
 
     const pics = [
-        ["/tree1.png",
-        "/tree2.png",
-        "/tree3.png",
-        "/tree4.png",],
+        ["tree1.png",
+        "tree2.png",
+        "tree3.png",
+        "tree4.png",],
 
-        ["/sakura1.png",
-        "/sakura2.png",
-        "/sakura3.png",
-        "/sakura4.png"],
+        ["sakura1.png",
+        "sakura2.png",
+        "sakura3.png",
+        "sakura4.png"],
 
-        ["/birch1.png",
-        "/birch2.png",
-        "/birch3.png",
-        "/birch4.png"],
+        ["birch1.png",
+        "birch2.png",
+        "birch3.png",
+        "birch4.png"],
 
-        ["/willow1.png",
-        "/willow2.png",
-        "/willow3.png",
-        "/willow4.png"]
+        ["willow1.png",
+        "willow2.png",
+        "willow3.png",
+        "willow4.png"]
     ]
 
     const [index, setIndex] = useState(3);

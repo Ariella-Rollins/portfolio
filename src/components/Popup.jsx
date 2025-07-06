@@ -77,7 +77,7 @@ const popup = ({ setPopup }) => {
                     </form> :
                         <div className='empty-form inset-shadow-sm inset-shadow-slate-800 flex flex-col gap-15 justify-center items-center sm:w-[500px] h-[565px] bg-slate-300 m-2 p-10 border-2 border-slate-600 rounded-md'>
                             <h2 className='bg-white p-2 rounded-lg'>Message sent! <br></br>Thank you for reaching out.</h2>
-                            <img className="h-[200px]" src="/white-letter.png" alt="message" ></img>
+                            <img className="h-[200px]" src="white-letter.png" alt="message" ></img>
                         </div>}
                 </div>
             </div>

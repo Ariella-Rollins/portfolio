@@ -27,8 +27,8 @@ function App() {
   const [projectInfo, setProjectInfo] = useState(null)
 
   const projects = [
-        {name:"Pokemon Guesser", details:"Web app makes guesses while eliminating possible answers. Made with React.js and Lottifiles.", img: "/pokemon.jpg", link:"https://github.com/Ariella-Rollins/pokemon_guesser", site:"https://ariella-rollins.github.io/pokemon_guesser/"},
-        {name:"Tiny Quiz", details:"Create and share custom 5-question quizzes. User info secured with JSON Web Token and Bcrypt authentication.", img: "/quiz.jpg", link:"https://github.com/Ariella-Rollins/tiny_quiz"},
+        {name:"Pokemon Guesser", details:"Web app makes guesses while eliminating possible answers. Made with React.js and Lottifiles.", img: "pokemon.jpg", link:"https://github.com/Ariella-Rollins/pokemon_guesser", site:"https://ariella-rollins.github.io/pokemon_guesser/"},
+        {name:"Tiny Quiz", details:"Create and share custom 5-question quizzes. User info secured with JSON Web Token and Bcrypt authentication.", img: "quiz.jpg", link:"https://github.com/Ariella-Rollins/tiny_quiz"},
         {name:"Snapshot", details:"Fully responsive photography portfolio website. Interactive carousel built using shadcn. Messaging capabilities via EmailJS; no backend required.", img:"snapshot.jpg", link:"https://github.com/Ariella-Rollins/Snapshot"}
     ]
   
@@ -186,7 +186,7 @@ function App() {
         <div className="cols">
           <div className="side">
             <div className='ariella pt-[20px]'>
-              <img src="/ariella.jpg" className='h-35 w-35 rounded-lg border-solid border-2 border-gray-300' alt="Ariella Rollins"></img>
+              <img src="ariella.jpg" className='h-35 w-35 rounded-lg border-solid border-2 border-gray-300' alt="Ariella Rollins"></img>
               <p className='intro bg-white/20 ml-[10px] p-[10px] rounded-md backdrop-blur' style={{ backdropFilter: "blur(1.5px)" }} >Hi! I'm a front-end web developer with a background in Linguistics. When I'm not building awesome apps, you can find me hiking or gardening with my pet ducks.</p>
             </div>
             <div className='sidebar text-blue-950'>
@@ -238,7 +238,7 @@ function App() {
             <fieldset id="about" className='border-2 border-white bg-white/20 mt-10 flex flex-col items-center'>
               <legend className='journey bg-gradient-to-r from-[#afff10] to-[#007513] text-black px-3 py-1 rounded-md'><h2>About me</h2></legend>
               <p className='bg-black/40 p-2 mt-10 mx-10 text-lg'>From a young age, I was drawn to photography and digital art. As a teenager, I became fascinated with languages. Now as a front-end dev, I combine my love for visual aesthetics and languages.</p>
-              <img src="/axo2.png" alt="axo" className='md:w-[80%] sm:w-[90%] w-[100%] p-5'></img>
+              <img src="axo2.png" alt="axo" className='md:w-[80%] sm:w-[90%] w-[100%] p-5'></img>
             </fieldset>
             <fieldset className='projects bg-white/20 mt-10 flex-col pt-8 px-8 border-2 border-white' id="projects">
               <legend className='journey bg-gradient-to-r from-[#afff10] to-[#007513] text-black px-3 py-1 rounded-md'><h2>Projects</h2></legend>
