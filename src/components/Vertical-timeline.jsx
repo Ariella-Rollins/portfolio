@@ -39,7 +39,7 @@ return (
             />
           </svg>
         </div>
-        <div className="timeline-end timeline-box bg-slate-800 border-2 border-slate-500">Waitress/Cashier<br></br>(2019)</div>
+        <div className="timeline-end timeline-box bg-slate-800 border-2 border-slate-500">Waitress & Cashier<br></br>(2019)</div>
         <hr className="bg-fuchsia-500" />
       </li>
       <li>

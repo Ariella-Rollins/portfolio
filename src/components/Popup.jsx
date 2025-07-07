@@ -46,32 +46,32 @@ const popup = ({ setPopup }) => {
 
     return (
         <div className='popup-overlay'>
-            <div className='popup bg-slate-400 border-t-3 border-t-white pt-[5px] pr-[10px] pb-[20px] pl-[10px]'>
+            <div className='popup bg-slate-400 border-t-3 border-t-white px-[10px] pb-[20px]'>
                 <div className="flex flex-col justify-center items-center">
                     <div className='flex flex-row justify-end items-start w-[100%]'>
                         <button onClick={() => { setPopup(false); setEmailSent(false) }} className='hover:bg-white/30 py-.5 px-1 rounded-lg'>X</button>
                     </div>
-                    {!emailSent ? <form className=' inset-shadow-sm inset-shadow-slate-800 flex flex-col items-center h-fit m-2 p-10 bg-slate-300 border-2 border-slate-600 rounded-md' onSubmit={sendEmail}>
+                    {!emailSent ? <form className=' inset-shadow-sm inset-shadow-slate-800 flex flex-col items-center h-fit m-2 sm:p-10 p-3 pt-5 bg-slate-300 border-2 border-slate-600 rounded-md' onSubmit={sendEmail}>
                         <h2 className="mb-8">Questions? Suggestions? <br></br>Shoot me a message!</h2>
                         {errors?.name && <p className="mb-4 bg-red-300 px-2">{errors.name}</p>}
-                        <div className="flex justify-between gap-10 sm:w-100 w-80 mb-8">
+                        <div className="flex sm:flex-row flex-col items-center sm:justify-between sm:gap-10 gap-3 sm:w-100 w-[95%] text-[12pt] sm:pb-8 mb-4">
                             <label htmlFor="name" className='text-lg'>Name:</label>
-                            <input type="text" onChange={(e) => setData(prev => ({ ...prev, name: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[294px] w-[70%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' name="name" id="" />
+                            <input type="text" onChange={(e) => setData(prev => ({ ...prev, name: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[294px] w-[80%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' name="name" id="" />
                         </div>
                         {errors?.email && <p className="mb-4 bg-red-300 px-2">{errors.email}</p>}
-                        <div className="flex justify-between gap-10 sm:w-100 w-80  mb-8">
+                        <div className="flex sm:flex-row flex-col items-center sm:justify-between sm:gap-10 gap-3 sm:w-100 w-[95%] text-[12pt] sm:pb-8 mb-4">
                             <label htmlFor="email" className='text-lg'>Email:</label>
-                            <input type="email" onChange={(e) => setData(prev => ({ ...prev, email: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[294px]  w-[70%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' name="email" id="" />
+                            <input type="email" onChange={(e) => setData(prev => ({ ...prev, email: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[294px]  w-[80%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' name="email" id="" />
                         </div>
                         {errors?.subject && <p className="mb-4 bg-red-300 px-2">{errors.subject}</p>}
-                        <div className="flex justify-between gap-10 sm:w-100 w-80 mb-8">
+                        <div className="flex j sm:flex-row flex-col items-center sm:justify-between sm:gap-10 gap-3 sm:w-100 w-[95%] text-[12pt] sm:pb-8 mb-4">
                             <label htmlFor="subject" className='text-lg'>Subject:</label>
-                            <input type="text" onChange={(e) => setData(prev => ({ ...prev, subject: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[294px]  w-[70%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' name="subject" id="" />
+                            <input type="text" onChange={(e) => setData(prev => ({ ...prev, subject: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[294px]  w-[80%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' name="subject" id="" />
                         </div>
                         {errors?.message && <p  className="mb-4 bg-red-300 px-2">{errors.message}</p>}
-                        <div className="flex justify-between gap-10 sm:w-100 w-80 mb-8">
+                        <div className="flex sm:flex-row flex-col items-center sm:justify-between sm:gap-10 gap-3 sm:w-100 w-[95%] text-[12pt] sm:pb-8 mb-4">
                             <label htmlFor="message" className='text-lg'>Message:</label>
-                            <textarea name="message" onChange={(e) => setData(prev => ({ ...prev, message: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[300px] w-[72%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' rows="3"></textarea>
+                            <textarea name="message" onChange={(e) => setData(prev => ({ ...prev, message: e.target.value }))} className='inset-shadow-sm inset-shadow-slate-400 border-2 border-slate-600 bg-white sm:w-[300px] w-[80%] pl-2 pr-2 pt-1 pb-1 m-0 rounded-lg focus:border-black-500 focus:border-2 focus:outline-3 focus:outline-offset-0 focus:outline-white' rows="3"></textarea>
                         </div>
                         <input type="submit" className=" border-2 border-purple-900 hover:border-purple-800 rounded-md pt-2 pb-2 pl-4 pr-4 inset-shadow-indigo-500 bg-gradient-to-r from-[#1fe1ff] to-[#8423f3] hover:bg-gradient-to-r hover:from-[#64eaff] hover:to-[#9f52f8] p-2 m-2 cursor-pointer" id="" value="Send" />
                     </form> :

@@ -106,7 +106,7 @@ function App() {
                 delay: 90,
               }}
               onInit={(typewriter) => {
-                const text = '<a class="link text-lg" href="#projects">Front-end Dev 💻</a>';
+                const text = '<a class="link sm:text-lg text-sm" href="#projects">Front-end Dev 💻</a>';
                 const maxLen = 17;
                 const delay = 90;
                 const basePause = 1000;
@@ -134,7 +134,7 @@ function App() {
                 delay: 90,
               }}
               onInit={(typewriter) => {
-                const text = '<a class="link text-lg" href="#about">Visual Story-teller 🌟</a>';
+                const text = '<a class="link sm:text-lg text-sm" href="#about">Visual Story-teller 🌟</a>';
                 const maxLen = 17;
                 const delay = 90;
                 const basePause = 1000;
@@ -162,7 +162,7 @@ function App() {
                 delay: 90,
               }}
               onInit={(typewriter) => {
-                const text = '<a class="link text-lg" href="#work">Life-long Learner 📗</a>';
+                const text = '<a class="link sm:text-lg text-sm" href="#work">Life-long Learner 📗</a>';
                 const maxLen = 17;
                 const delay = 90;
                 const basePause = 1000;
@@ -185,9 +185,9 @@ function App() {
         </div>
         <div className="cols">
           <div className="side">
-            <div className='ariella pt-[20px]'>
+            <div className='ariella sm:pt-[20px]'>
               <img src="ariella.jpg" className='h-35 w-35 rounded-lg border-solid border-2 border-gray-300' alt="Ariella Rollins"></img>
-              <p className='intro bg-white/20 ml-[10px] p-[10px] rounded-md backdrop-blur' style={{ backdropFilter: "blur(1.5px)" }} >Hi! I'm a front-end web developer with a background in Linguistics. When I'm not building awesome apps, you can find me hiking or gardening with my pet ducks.</p>
+              <p className='intro bg-white/20 sm:ml-[10px] p-[10px] rounded-md backdrop-blur' style={{ backdropFilter: "blur(1.5px)" }} >Hi! I'm a front-end web developer with a background in Linguistics. When I'm not building awesome apps, you can find me hiking or gardening with my pet ducks.</p>
             </div>
             <div className='sidebar text-blue-950'>
               <Accordion type="multiple" className="acc" collapsible>
@@ -237,8 +237,8 @@ function App() {
             </fieldset>
             <fieldset id="about" className='border-2 border-white bg-white/20 mt-10 flex flex-col items-center'>
               <legend className='journey bg-gradient-to-r from-[#afff10] to-[#007513] text-black px-3 py-1 rounded-md'><h2>About me</h2></legend>
-              <p className='bg-black/40 p-2 mt-10 mx-10 text-lg'>From a young age, I was drawn to photography and digital art. As a teenager, I became fascinated with languages. Now as a front-end dev, I combine my love for visual aesthetics and languages.</p>
-              <img src="axo2.png" alt="axo" className='md:w-[80%] sm:w-[90%] w-[100%] p-5'></img>
+              <p className='bg-black/40 sm:p-2 p-1 mt-10 sm:mx-10 mx-2 sm:text-lg text-md'>From a young age, I was drawn to photography and digital art. As a teenager, I became fascinated with languages. Now as a front-end dev, I combine my love for visual aesthetics and languages.</p>
+              <img src="axo2.png" alt="axo" className='md:w-[80%] sm:w-[90%] w-[100%] sm:p-5 py-1'></img>
             </fieldset>
             <fieldset className='projects bg-white/20 mt-10 flex-col pt-8 px-8 border-2 border-white' id="projects">
               <legend className='journey bg-gradient-to-r from-[#afff10] to-[#007513] text-black px-3 py-1 rounded-md'><h2>Projects</h2></legend>
@@ -343,41 +343,41 @@ function App() {
                 <table className='vertical table-auto border-separate border-3 border-white/30 border-spacing-2'>
                   <thead>
                     <tr>
-                      <th className='p-2'>Languages</th>
-                      <th className='p-2'>Frameworks/libraries</th>
-                      <th className='p-2'>Databases/tools</th>
+                      <th className='p-1 sm:p-2'>Languages</th>
+                      <th className='p-1 sm:p-2'>Frameworks</th>
+                      <th className='p-1 sm:p-2'>Tools</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className='bg-white/20 backdrop-blur-sm' style={{ backdropFilter: "blur(1.5px)" }}>
-                      <td className='p-2'>Javascript</td>
-                      <td className='p-2'>React.js</td>
-                      <td className='p-2'>MongoDB</td>
+                      <td className='p-1 sm:p-2'>Javascript</td>
+                      <td className='p-1 sm:p-2'>React.js</td>
+                      <td className='p-1 sm:p-2'>MongoDB</td>
                     </tr>
                     <tr className='bg-white/20 backdrop-blur-sm' style={{ backdropFilter: "blur(1.5px)" }}>
-                      <td className='p-2'>Python</td>
-                      <td className='p-2'>Express.js</td>
-                      <td className='p-2'>Mongoose</td>
+                      <td className='p-1 sm:p-2'>Python</td>
+                      <td className='p-1 sm:p-2'>Express.js</td>
+                      <td className='p-1 sm:p-2'>Mongoose</td>
                     </tr>
                     <tr className='bg-white/20 backdrop-blur-sm' style={{ backdropFilter: "blur(1.5px)" }}>
-                      <td className='p-2'>HTML</td>
-                      <td className='p-2'>Node.js</td>
-                      <td className='p-2'>MySQL</td>
+                      <td className='p-1 sm:p-2'>HTML</td>
+                      <td className='p-1 sm:p-2'>Node.js</td>
+                      <td className='p-1 sm:p-2'>MySQL</td>
                     </tr>
                     <tr className='bg-white/20 backdrop-blur-sm' style={{ backdropFilter: "blur(1.5px)" }}>
-                      <td className='p-2'>CSS</td>
-                      <td className='p-2'>Flask</td>
-                      <td className='p-2'>Postman</td>
+                      <td className='p-1 sm:p-2'>CSS</td>
+                      <td className='p-1 sm:p-2'>Flask</td>
+                      <td className='p-1 sm:p-2'>Postman</td>
+                    </tr>
+                    <tr className='bg-white/20 backdrop-blur-sm text-sm' style={{ backdropFilter: "blur(1.5px)" }}>
+                      <td className='p-1 sm:p-2 '></td>
+                      <td className='p-1 sm:p-2'>Tailwind</td>
+                      <td className='p-1 sm:p-2'>Github</td>
                     </tr>
                     <tr className='bg-white/20 backdrop-blur-sm' style={{ backdropFilter: "blur(1.5px)" }}>
-                      <td className='p-2'></td>
-                      <td className='p-2'>Tailwind</td>
-                      <td className='p-2'>Github</td>
-                    </tr>
-                    <tr className='bg-white/20 backdrop-blur-sm' style={{ backdropFilter: "blur(1.5px)" }}>
-                      <td className='p-2'></td>
-                      <td className='p-2'>Shadcn</td>
-                      <td className='p-2'>ASW (EC2)</td>
+                      <td className='p-1 sm:p-2'></td>
+                      <td className='p-1 sm:p-2'>Shadcn</td>
+                      <td className='p-1 sm:p-2'>ASW (EC2)</td>
                     </tr>
                   </tbody>
                 </table>
